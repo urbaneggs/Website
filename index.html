@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Eggs | Premium Layer Poultry Farm</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-yellow: #FFCC00;
+            --text-dark: #1a1a1a;
+            --text-light: #555555;
+            --bg-gray: #f9f9f9;
+        }
+        body {
+            font-family: 'Optima', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5vw;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        .nav-links a {
+            margin: 0 15px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary-yellow);
+        }
+        .btn-primary {
+            background-color: var(--primary-yellow);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #000;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #e6b800;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid var(--text-dark);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            /* Replace the URL below with an image of your sheds or eggs */
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9)), url('hero-bg.jpg') center/cover;
+            padding: 120px 5vw;
+            text-align: center;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Core Products Section */
+        .products {
+            padding: 80px 5vw;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .products h2 {
+            font-size: 2rem;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background: var(--bg-gray);
+            border: 1px solid #eaeaea;
+            padding: 40px;
+            border-radius: 8px;
+            width: 350px;
+            text-align: left;
+        }
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .product-card a {
+            font-weight: bold;
+            border-bottom: 2px solid var(--primary-yellow);
+            padding-bottom: 2px;
+        }
+
+        /* The Difference Section */
+        .difference {
+            padding: 80px 5vw;
+            background-color: var(--bg-gray);
+            text-align: center;
+        }
+        .features-grid {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .feature {
+            max-width: 300px;
+        }
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .feature h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            padding: 60px 5vw;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .footer-col h5 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--primary-yellow);
+        }
+        .footer-col p, .footer-col a {
+            color: #bbbbbb;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">URBAN EGGS</div>
+        <nav class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Our Farm</a>
+            <a href="#">Products</a>
+            <a href="#">B2B Solutions</a>
+        </nav>
+        <a href="#" class="btn-primary">Contact Us</a>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Redefining Quality Poultry in India</h1>
+        <p>Operating a modern, 20,000-bird layer farm in Rajkot. We combine state-of-the-art, climate-controlled environments with rigorous hygiene standards to deliver premium farm-fresh eggs and commercial liquid egg solutions.</p>
+        <div>
+            <a href="#" class="btn-primary">Explore Products</a>
+            <a href="#" class="btn-secondary">Partner With Us</a>
+        </div>
+    </section>
+
+    <!-- Core Offerings Section -->
+    <section class="products">
+        <h2>OUR CORE OFFERINGS</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <h3>Farm-Fresh Shell Eggs</h3>
+                <p>Sourced directly from our state-of-the-art sheds. Gathered and packed daily to ensure optimal nutrition and guaranteed freshness from farm to table.</p>
+                <br>
+                <a href="#">View Retail Options &rarr;</a>
+            </div>
+            <div class="product-card">
+                <h3>Pasteurized Liquid Eggs</h3>
+                <p>Consistent, safe, and efficient solutions designed for commercial food service and manufacturing. Fully pasteurized for absolute quality control.</p>
+                <br>
+                <a href="#">Discover Commercial Solutions &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Difference Section -->
+    <section class="difference">
+        <h2>THE URBAN EGGS DIFFERENCE</h2>
+        <div class="features-grid">
+            <div class="feature">
+                <div class="feature-icon">🏗️</div>
+                <h4>Modern Infrastructure</h4>
+                <p>Engineered, climate-controlled environments with dedicated electrical mainlines to ensure uninterrupted flock health, safety, and comfort.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">📊</div>
+                <h4>Data-Driven Quality</h4>
+                <p>Strict digital tracking from daily feed inputs to depletion metrics, ensuring unmatched consistency across our entire production line.</p>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">🤝</div>
+                <h4>Scalable Supply Chain</h4>
+                <p>Reliable, high-volume output tailored to meet the exacting demands of both retail distribution and B2B commercial partnerships.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <div class="logo" style="color: #fff; margin-bottom: 20px;">URBAN EGGS</div>
+            <p>Premium farm-fresh eggs and<br>innovative liquid egg products.</p>
+        </div>
+        <div class="footer-col">
+            <h5>Quick Links</h5>
+            <a href="#">Our Farm</a>
+            <a href="#">Retail Products</a>
+            <a href="#">B2B Solutions</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="footer-col">
+            <h5>Contact Information</h5>
+            <p>Rajkot, Gujarat, India</p>
+            <p>info@urbaneggs.in</p>
+            <p>&copy; 2026 Urban Eggs. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
