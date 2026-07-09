@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B2B Solutions | Urban Eggs</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-yellow: #FFCC00;
+            --text-dark: #1a1a1a;
+            --text-light: #555555;
+            --bg-gray: #f9f9f9;
+        }
+        body {
+            font-family: 'Optima', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 5vw;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            min-height: 90px;
+        }
+        .header-left {
+            display: flex;
+            flex-direction: row; 
+            align-items: center; 
+            text-align: left;
+            gap: 15px; 
+        }
+        .header-left img {
+            height: 100px; 
+            margin: 0; 
+            padding: 0;
+            display: block; 
+        }
+        .header-left .brand-name {
+            font-size: 16px;
+            font-weight: ; 
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--text-dark);
+            margin: 0; 
+            padding: 0;
+            line-height: 1; 
+        }
+        .header-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .nav-links a {
+            margin: 0 15px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--primary-yellow);
+        }
+        .btn-primary {
+            background-color: var(--primary-yellow);
+            border: 2px solid var(--primary-yellow);
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+            transition: background 0.3s, border-color 0.3s;
+            display: inline-block;
+        }
+        .btn-primary:hover {
+            background-color: #e6b800;
+            border-color: #e6b800;
+        }
+
+        /* Page Hero */
+        .b2b-hero {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            padding: 100px 5vw;
+            text-align: center;
+            border-bottom: 5px solid var(--primary-yellow);
+        }
+        .b2b-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--primary-yellow);
+        }
+        .b2b-hero p {
+            font-size: 1.25rem;
+            color: #dddddd;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Value Proposition Section */
+        .value-prop {
+            padding: 80px 10vw;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .value-prop h2 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        .value-prop p {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            max-width: 900px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Partnership Grid */
+        .partner-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .partner-card {
+            background-color: var(--bg-gray);
+            border: 1px solid #eaeaea;
+            padding: 40px 30px;
+            border-radius: 8px;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .partner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .partner-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .partner-card h3 {
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        .partner-card p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Call to Action Banner */
+        .cta-banner {
+            background-color: var(--bg-gray);
+            border-top: 1px solid #eaeaea;
+            text-align: center;
+            padding: 80px 5vw;
+        }
+        .cta-banner h2 {
+            font-size: 2.2rem;
+            color: var(--text-dark);
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .cta-banner p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 35px auto;
+            color: var(--text-light);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-dark);
+            color: #ffffff;
+            padding: 30px 5vw 40px 5vw; 
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .footer-col h5 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--primary-yellow);
+        }
+        .footer-col p {
+            color: #bbbbbb;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .footer-col > a {
+            color: #bbbbbb;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            display: block;
+            transition: color 0.3s; 
+        }
+        .footer-col > a:hover {
+            color: var(--primary-yellow);
+        }
+        .footer-col p a {
+            display: inline;
+            color: #bbbbbb;
+        }
+        .footer-col p a:hover {
+            color: var(--primary-yellow);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+   <header>
+        <div class="header-left">
+            <img src="Final Logo.jpeg" alt="Urban Eggs Logo">
+            <div class="brand-name">URBAN EGGS</div>
+        </div>
+
+        <div class="header-center">
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="our-farm.html">Our Farm</a>
+                <a href="products.html">Products</a>
+                <a href="b2b.html"style="color: var(--primary-yellow);">B2B Solutions</a>
+            </nav>
+        </div>
+
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="b2b-hero">
+        <h1>Secure Your Supply Chain</h1>
+        <p>We don't just supply premium white eggs; we provide reliability. Partner with a modern, data-driven farm equipped to scale alongside your commercial demands at the best possible market rates.</p>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="value-prop">
+        <h2>Partner and Thrive with Urban Eggs</h2>
+        <p>In the commercial food and distribution industry, consistency is your most valuable asset. A partnership with Urban Eggs means direct access to a high-volume, 20,000-bird production line right here in Rajkot. By utilizing rigorous digital tracking—from daily feed inputs to depletion metrics—we guarantee that the premium white eggs you receive today match the exact quality, safety, and freshness of the eggs you receive tomorrow.</p>
+        <p>We welcome all applicable businesses to explore how a direct-to-farm relationship can lower your procurement costs, eliminate supply chain volatility, and ultimately help your business thrive.</p>
+
+        <!-- Partnership Grid -->
+        <div class="partner-grid">
+            <div class="partner-card">
+                <span class="icon">🏢</span>
+                <h3>Wholesalers & Distributors</h3>
+                <p>Consistent, pallet-level output designed for seamless integration into your logistics network. We offer volume-based pricing structures to maximize your margins and ensure your network is never out of stock.</p>
+            </div>
+            <div class="partner-card">
+                <span class="icon">🍳</span>
+                <h3>Food Service & Bakeries</h3>
+                <p>Commercial kitchens require flawless performance. Our strict nutritional feed formulations guarantee the resilient shells and vibrant yolks necessary for high-end culinary, baking, and large-scale food manufacturing.</p>
+            </div>
+            <div class="partner-card">
+                <span class="icon">🛒</span>
+                <h3>Retail Chains</h3>
+                <p>Give your customers the farm-fresh guarantee. Our naturally ventilated sheds ensure the highest standards of avian health, resulting in a superior retail product that drives customer loyalty and repeat purchases.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-banner">
+        <h2>Let’s Build a Profitable Partnership</h2>
+        <p>Ready to secure a highly reliable, cost-effective supply of premium white eggs or organic poultry fertilizer? Submit an inquiry today, and our team will work directly with you to craft a custom B2B solution tailored to your operational needs and pricing targets.</p>
+        <a href="contact.html" class="btn-primary" style="font-size: 1.1rem; padding: 15px 35px;">Submit a B2B Inquiry</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-col">
+            <h5>URBAN EGGS</h5>
+            <p>Premium farm-fresh shell eggs<br>scaled for excellence.</p>
+        </div>
+        <div class="footer-col">
+            <h5>Quick Links</h5>
+            <a href="index.html">Home</a>
+            <a href="our-farm.html">Our Farm</a>
+            <a href="products.html">Products</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+            <h5>Contact Information</h5>
+            <p>
+                <a href="https://maps.app.goo.gl/Pf2Z3iV4UfkmTTQk8" target="_blank">
+                    Survey No. 100/2 Pipardi Jalsika Road,<br>
+                    Ghiyavad, Wankaner, Gujarat 363621, India
+                </a>
+            </p>
+            <p>Email: <a href="mailto:urbaneggsrajkot@gmail.com">urbaneggsrajkot@gmail.com</a></p>
+            <p>Ph: <a href="tel:+919409434343">+91 9409434343</a></p>
+            <p>© 2026 Urban Eggs. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
