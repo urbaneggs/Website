@@ -84,7 +84,7 @@
             padding: 80px 5vw;
             background-color: #ffffff;
             text-align: center;
-            min-height: 60vh; /* Keeps the footer pushed down */
+            min-height: 60vh; 
         }
         .contact-page-wrapper h1 {
             font-size: 2.5rem;
@@ -122,7 +122,12 @@
             font-size: 1rem;
             box-sizing: border-box;
         }
-        .form-group input:focus, .form-group textarea:focus {
+        /* Style for invalid inputs */
+        .form-group input:invalid:focus {
+            border-color: red;
+            outline: none;
+        }
+        .form-group input:valid:focus, .form-group textarea:focus {
             border-color: var(--primary-yellow);
             outline: none;
         }
@@ -179,6 +184,7 @@
 </head>
 <body>
 
+    <!-- Header Navigation -->
     <header>
         <div class="header-left">
             <img src="Final Logo.jpeg" alt="Urban Eggs Logo">
@@ -195,11 +201,19 @@
         <a href="contact.html" class="btn-primary">Contact Us</a>
     </header>
 
+    <!-- Dedicated Contact Form Section -->
     <section class="contact-page-wrapper">
         <h1>GET IN TOUCH</h1>
         <p>Have questions about retail supply or B2B solutions? Drop us a message below.</p>
         
-        <form class="contact-form" action="#" method="POST">
+        <!-- Form action updated to use FormSubmit API for direct emailing -->
+        <form class="contact-form" action="https://formsubmit.co/urbaneggsrajkot@gmail.com" method="POST">
+            
+            <!-- Optional: Disables the Captcha page for a smoother user experience -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Optional: Redirects the user back to the contact page after sending -->
+            <input type="hidden" name="_next" value="https://YOUR-GITHUB-USERNAME.github.io/contact.html">
+
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" required placeholder="Your Full Name">
@@ -207,12 +221,17 @@
             
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number">
+                <!-- Pattern ensures: Starts with +, 1 to 3 digits for country code, optional space, then exactly 10 digits -->
+                <input type="tel" id="phone" name="phone" required 
+                       pattern="^\+[1-9]\d{0,2}[ ]?\d{10}$" 
+                       title="Must contain country code followed by 10 digits (e.g., +91 9409434343)" 
+                       placeholder="+91 9409434343">
             </div>
             
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" required placeholder="Your Email Address">
+                <!-- type="email" strictly enforces the inclusion of an '@' symbol and valid domain -->
+                <input type="email" id="email" name="email" required placeholder="name@example.com">
             </div>
             
             <div class="form-group">
@@ -224,6 +243,7 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-col">
             <div class="logo" style="color: #fff; margin-bottom: 20px;">URBAN EGGS</div>
@@ -245,10 +265,10 @@
                 </a>
             </p>
             <p>
-                Email: <a href="mailto:urbaneggsrajkot@gmail.com">urbaneggsrajkot@gmail.com</a>     
+                Email: <a href="mailto:urbaneggsrajkot@gmail.com">urbaneggsrajkot@gmail.com</a> &nbsp;&nbsp;&nbsp; 
                 Ph: <a href="tel:+919409434343">+91 9409434343</a>
             </p>
-            <p>© 2026 Urban Eggs. All rights reserved.</p>
+            <p>&copy; 2026 Urban Eggs. All rights reserved.</p>
         </div>
     </footer>
 
