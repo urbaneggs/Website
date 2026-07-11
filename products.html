@@ -408,5 +408,21 @@
         </div>
     </footer>
 
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            // If the user scrolls down more than 50 pixels, add the 'scrolled' class
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                // If they scroll back to the very top, bring the links back
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
+</body>
+</html>
+    
 </body>
 </html>
